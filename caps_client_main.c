@@ -6,10 +6,8 @@
 
 #include "caps.h"
 
-// Returns server socket_fd
 int setup_client(int *p_sock_fd);
 
-void sigchld_handler(int s); 
 void sigint_handler(int s);
 void init_signal_handler();
 
