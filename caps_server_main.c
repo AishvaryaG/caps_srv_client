@@ -7,9 +7,6 @@
 
 #include "caps.h"
 
-#define BACKLOG 5
-#define PORT_NUM 4444 
-
 // Returns server socket_fd
 int setup_server(int *p_sock_fd);
 
@@ -47,7 +44,7 @@ int main (int argc, char *argv[])
 		if (!fork()) { //child process
 			close(server_fd); //let go of the server fd in child thread
 
-			run_client(client_fd);
+			run_client_handler(client_fd);
 			close(client_fd);
 			exit(0);
 		} else {
