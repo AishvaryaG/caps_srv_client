@@ -1,5 +1,10 @@
 #include "caps.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/socket.h>
+
 void run_client(int client_fd)
 {
 	int num_bytes;

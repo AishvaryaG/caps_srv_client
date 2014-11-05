@@ -1,4 +1,12 @@
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+#include <sys/types.h>
+#include <sys/socket.h>
+
 #include <sys/wait.h>
 #include <signal.h>
 #include <netdb.h>
@@ -49,7 +57,7 @@ int main (int argc, char *argv[])
 			exit(0);
 		} else {
 			// parent process doesn't need this
-			close (client_fd);
+			//close (client_fd);
 		}		
 	}
 
